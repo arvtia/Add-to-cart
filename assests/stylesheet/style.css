@@ -1,0 +1,125 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    justify-content: center;
+    display: flex;
+}
+.navbar-who {
+    width: 80vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(205, 159, 248);
+    padding: 6px;
+    border-radius: 20px;
+    top: 20px;
+    position: fixed;
+    z-index: 2;
+}
+.fluffy{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+.fluffy .saatwala h3{
+    padding-left: 10px;
+}
+.fluffy .saatwala h3:hover{
+    cursor: pointer;
+    color: antiquewhite;
+    scale: 1.1;
+    transition: all 1.2s ease;
+}
+.fluffy-cart{
+    display: flex;
+    align-content: center;
+    flex-flow: wrap;
+}
+.fluffy-cart .cart-here img{
+    height: 50px;
+    width: 50px;
+}
+header .fluffy-cart .cart-list-num p{
+    padding-left: 8px;
+    position: relative;
+    left: -9px;
+    background-color: red;
+    border-radius: 52px;
+    padding-right: 9px;
+}
+.fluffy .logo-logonke img{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+
+/*-------Index page------*/ 
+
+.parent-container{
+    background-color: #FBFBFB;
+    position: relative;
+    top: 120px;
+}
+.parent-container .cookie_theifs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90vw;
+    margin: auto;
+
+ }
+
+.parent-container .cookie_theifs .cards #photo_product{
+    height: 300px;
+    width: 270px;
+    object-fit: cover;
+}
+.parent-container .cookie_theifs .cards h3{
+    text-align: center;
+}
+.parent-container .cookie_theifs .cards{
+    width: 300px;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 14px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding-top: 10px;
+}
+.parent-container .cookie_theifs .cards .box-within .box-within-abox{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    justify-content: space-between;
+}
+.parent-container .cookie_theifs .cards .box-within .box-within-abox .another1_yahboy{
+    background-color:rgb(192, 135, 246);
+}
+
+.parent-container .cookie_theifs .cards .box-within .box-within-abox input{
+    width: 48px; 
+}
+.parent-container .cookie_theifs .cards .box-within .box-within-abox img{
+    height: 18px;
+    padding: 2px;
+
+}
+
+.go-to-cart{
+    padding: 2px;
+    background-color: gray;
+    text-align: center;
+    color: white;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    cursor: pointer;
+}
+
+
+@media (max-width:900px) {
+    header .navbar-who .fluffy .saatwala h3{
+        display: none;
+    }
+}
