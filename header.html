@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="fluffy-cart">
-            <div class="cart-here">
+            <div class="cart-here" id="cart-icon-logo">
                 <img src="assests/images/cart-icon.svg" alt="cart-icon">
             </div>
             <div class="cart-list-num">
@@ -29,6 +29,9 @@
         </div>
     </div>
 </header>
+
+<div class="parent-checkin">
+
 
 
 <!--the body content-->
@@ -131,22 +134,50 @@
             </div>
         </div>
     </div>
+</div>
+<!--parent container ends here-->
 
+<!---side bar check in list opens here-->
+<div class="sothela-bhai" id="sothela-bhai">
+    <div class="so-bh-heading">
+        <h2>Check in</h2>
+        <button class="close-btn" onclick="closeCheckPage()">Close</button>
+    </div>
+    <div class="so-list-items">
+        <!--cards start here-->
+        <div class="cards">   
+            <img src="assests/images/space-x.webp" alt="space-x" id="photo_product">
+                    <h3 id="descriptionItem">
+                        T shirt (XL)
+                    </h3>
+                    <p id="prize">$300</p>
+                    <div class="another1_yahboy">
+                        <img src="assests/images/minus-icon.png" alt="minus" class="minus">
+                        <p id="counter">1</p>
+                        <img src="assests/images/plus-icon.svg" alt="plus" class="plus">
+                    </div>
+        </div>
+        <!--cards end here-->
+
+    </div>
+    <div class="checkin-or-not">
+        <div class="close-check" id="closeBCheck">
+            <p>CLOSE</p>
+        </div>
+        <div class="check-out">
+            <p>CHECK OUT</p>
+        </div>
+    </div>
 
 </div>
 
 
-
-
-
-
-
-
-
-
+</div>
+<!--eclosing check in and parent-->
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="checkin.js"></script>
 </body>
 </html>
