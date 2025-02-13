@@ -63,6 +63,7 @@ header .fluffy-cart .cart-list-num p{
     background-color: #FBFBFB;
     position: relative;
     top: 120px;
+    width: 100%;
 }
 .parent-container .cookie_theifs{
     display: flex;
@@ -118,8 +119,113 @@ header .fluffy-cart .cart-list-num p{
 }
 
 
+/*----side bar  with checkin items css starts here*/
+
+.parent-checkin{
+    display: flex;
+}
+
+.sothela-bhai{
+    position: fixed;
+    min-width: 400px;
+    height: 100vh;
+    background-color: white;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+.so-bh-heading{
+    color:white;
+    text-align: start;
+    justify-content:space-between;
+    position: relative;
+    display: flex;
+    padding: 20px;
+    background-color: rgb(17, 16, 16);
+    
+}
+.so-bh-heading .close-btn{
+    background-color: yellow;
+    height: 40px;
+    width: 70px;
+}
+.so-bh-heading .close-btn:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transition: all 2s ease;
+}
+.sothela-bhai .so-list-items{
+    background-color: rgb(33, 32, 32);
+    height: auto;
+    position: relative;
+    overflow-y: scrolls;
+}
+.sothela-bhai .cards{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sothela-bhai .so-list-items #photo_product{
+    height: 50px;
+    width: 50px;
+    object-fit: fill;
+}
+.sothela-bhai .cards .another1_yahboy{
+    display: flex;
+}
+.sothela-bhai .cards .another1_yahboy img{
+    height: 20px;
+    padding: 5px;
+}
+.sothela-bhai .cards h3{
+    font-size: large;
+}
+.sothela-bhai .checkin-or-not{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100px;
+    align-items: center;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+}
+.sothela-bhai .checkin-or-not .close-check{
+    background-color: yellowgreen;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+    display: grid;
+    cursor: pointer;
+}
+.sothela-bhai .checkin-or-not .check-out{
+    background-color: yellowgreen;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    display: grid;
+}
+
+
+
+
+/*------------proceed to buy---------*/
+
 @media (max-width:900px) {
     header .navbar-who .fluffy .saatwala h3{
         display: none;
     }
+}
+
+@media (max-width:400px) {
+    .sothela-bhai{
+        width: 100%;
+    }
+    
 }
