@@ -49,8 +49,7 @@ minusBtn.addEventListener('click', () => {
         counter.textContent = count;
     }
 });
-
-
+//this part of the code is not needed in page, you can neither delete it or keep it. its up to you.
 const minus1 = document.querySelector('.minus1');
     const plus1 = document.querySelector('.plus1');
     const counter1 = document.querySelector('.counter1'); 
