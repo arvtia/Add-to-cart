@@ -71,8 +71,12 @@ header .fluffy-cart .cart-list-num p{
     justify-content: space-evenly;
     width: 90vw;
     margin: auto;
-
+    flex-wrap: wrap;
  }
+
+.parent-container .cookie_theifs .cards{
+
+}
 
 .parent-container .cookie_theifs .cards #photo_product{
     height: 300px;
@@ -89,6 +93,8 @@ header .fluffy-cart .cart-list-num p{
     padding: 14px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding-top: 10px;
+    height: 520px;
+    
 }
 .parent-container .cookie_theifs .cards .box-within .box-within-abox{
     display: flex;
@@ -101,7 +107,8 @@ header .fluffy-cart .cart-list-num p{
 }
 
 .parent-container .cookie_theifs .cards .box-within .box-within-abox input{
-    width: 48px; 
+    width: 28px;
+    text-align: center; 
 }
 .parent-container .cookie_theifs .cards .box-within .box-within-abox img{
     height: 18px;
@@ -118,6 +125,12 @@ header .fluffy-cart .cart-list-num p{
     cursor: pointer;
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 /*----side bar  with checkin items css starts here*/
 
@@ -160,6 +173,7 @@ header .fluffy-cart .cart-list-num p{
     height: auto;
     position: relative;
     overflow-y: scrolls;
+    color: white;
 }
 .sothela-bhai .cards{
     background-color: aliceblue;
@@ -213,7 +227,16 @@ header .fluffy-cart .cart-list-num p{
 }
 
 
+/*----------cart-items------------------*/
+.cart-item { border-bottom: 1px solid #ddd; padding: 10px; display: flex; align-items: center; justify-content: start; width: 100%; justify-content: space-evenly; background-color: black; color: white; }
+       
+.button-cart{
+    border-radius: 5px;
+    background-color: #CD9FF8;
+    border: none;
+    cursor: pointer;
 
+}
 
 /*------------proceed to buy---------*/
 
