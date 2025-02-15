@@ -3,215 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shopping Cart</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assests/stylesheet/style.css">
-    
 </head>
-<body>
-<header>
-    <div class="navbar-who">
-        <div class="fluffy">
-            <div class="logo-logonke">
-                <img src="assests/images/CB-logo.svg" alt="CB-logo">
-            </div>
-            <div class="saatwala">
-                <h3>Criogenic Base</h3>
-            </div>
-        </div>
-        <div class="fluffy-cart">
-            <div class="cart-here" id="cart-icon-logo">
-                <img src="assests/images/cart-icon.svg" alt="cart-icon">
-            </div>
-            <div class="cart-list-num">
-                <p id="list-items-no">1</p>
-            </div>
-        </div>
-    </div>
-</header>
+<body class="bg-light">
 
-<div class="parent-checkin">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Shopping Cart using Local Storage</h2>
 
-
-
-<!--the body content-->
-<div class="parent-container">
-    <div class="cookie_theifs">
-        <!--cards-start here-->
-        <div class="cards">
-            <div class="name-of-box">
-            </div>
-            <img src="assests/images/space-x.webp" alt="space-x" id="photo_product">
-            <div class="box-within">
-                <h3 id="descriptionItem">
-                    Peak shirt (XL)
-                </h3>
-                <p>Lorem, ipsum dolor. Fugit, hic quidem. Quod, at ab! Saepe, mollitia ipsam? <a href="#">Read more..</a></p>
-                <div class="box-within-abox">
-                    <p id="prize">$300</p>
+        <!-- Product List -->
+        <div class="row " id="productList">
+            <div class="col-md-3">
+                <div class="card p-3">
+                    <img src="assests/images/space-x.webp" class="card-img-top" alt="T-shirt">
+                    <h5 class="card-title">T-shirt</h5>
+                    <p class="card-text">Price: $300</p>
+                    <button class="btn btn-primary" onclick="addToCart(1, 'T-shirt', 300, 'assests/images/space-x.webp')">Add to Cart</button>
                 </div>
-                <div class="go-to-cart">
-                    <button type="button" class="button-cart" onclick="addToCart(1, 'Tea-Shirt (XL)', 300)">ADD TO CART</button>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3">
+                    <img src="assests/images/space-x.webp" class="card-img-top" alt="Jeans">
+                    <h5 class="card-title">Jeans</h5>
+                    <p class="card-text">Price: $500</p>
+                    <button class="btn btn-primary" onclick="addToCart(2, 'Jeans', 500, 'assests/images/space-x.webp')">Add to Cart</button>
+                </div>
+            </div>
+           <div class="col-md-3">
+                <div class="card p-3">
+                    <img src="assests/images/space-x.webp" class="card-img-top" alt="Shoes">
+                    <h5 class="card-title">Shoes</h5>
+                    <p class="card-text">Price: $700</p>
+                    <button class="btn btn-primary" onclick="addToCart(3, 'Shoes', 700, 'assests/images/space-x.webp')">Add to Cart</button>
+                </div>
+            </div> 
+            <div class="col-md-3">
+                <div class="card p-3">
+                    <img src="assests/images/space-x.webp" class="card-img-top" alt="Shoes">
+                    <h5 class="card-title">Shoes</h5>
+                    <p class="card-text">Price: $700</p>
+                    <button class="btn btn-primary" onclick="addToCart(4, 'jeans XL', 900, 'assests/images/space-x.webp')">Add to Cart</button>
                 </div>
             </div>
         </div>
-        <!--cards end here-->
+        
 
-        <div class="cards">
-            <div class="name-of-box">
-            </div>
-            <img src="assests/images/space-x.webp" alt="space-x" id="photo_product">
-            <div class="box-within">
-                <h3 id="descriptionItem">
-                    Peak shirt (XL)
-                </h3>
-                <p>Lorem, ipsum dolor. Fugit, hic quidem. Quod, at ab! Saepe, mollitia ipsam? <a href="#">Read more..</a></p>
-                <div class="box-within-abox">
-                    <p id="prize">$200</p>
-                </div>
-                <div class="go-to-cart">
-                    <button type="button" class="button-cart" onclick="addToCart(2, 'Sea-Shirt (XL)', 200)">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-        <div class="cards">
-            <div class="name-of-box">
-            </div>
-            <img src="assests/images/space-x.webp" alt="space-x" id="photo_product">
-            <div class="box-within">
-                <h3 id="descriptionItem">
-                    Peak shirt (XL)
-                </h3>
-                <p>Lorem, ipsum dolor. Fugit, hic quidem. Quod, at ab! Saepe, mollitia ipsam? <a href="#">Read more..</a></p>
-                <div class="box-within-abox">
-                    <p id="prize">$450</p>
-                </div>
-                <div class="go-to-cart">
-                    <button type="button" class="button-cart" onclick="addToCart(3, 'leo-Shirt (XL)', 450)">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-         <!--cards end here--> 
-        <div class="cards">
-            <div class="name-of-box">
-            </div>
-            <img src="assests/images/another-one.jpeg" alt="space-x" id="photo_product">
-            <div class="box-within">
-                <h3 id="descriptionItem">
-                    Majestic Piece (XL)
-                </h3>
-                <p>Lorem, ipsum dolor. Fugit, hic quidem. Quod, at ab! Saepe, mollitia ipsam? <a href="#">Read more..</a></p>
-                <div class="box-within-abox">
-                    <p id="prize">$500</p>
-                </div>
-                <div class="go-to-cart">
-                    <button type="button" class="button-cart" onclick="addToCart(4, 'Marjestic (XL)', 500)">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-        <!--cards end here-->
+        <hr>
+
+        <!-- Cart Section -->
+        <h3 class="mt-4">Your Cart</h3>
+        <table class="table table-bordered mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                    <th>remove item</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+
+            </tbody>
+        </table>
+
+        <!-- Total Price -->
+        <h4>Total Price: <span id="totalPrice">0</span></h4>
        
-        <!--cards finish here-->
-    </div>
-</div>
-<!--parent container ends here-->
 
-<!---side bar check in list opens here-->
-<div class="sothela-bhai" id="sothela-bhai">
-    <div class="so-bh-heading">
-        <h2>Check in</h2> 
-        <button class="close-btn" onclick="closeCheckPage()">Close</button>
-    </div>
-    <div class="so-list-items">
-        <div id="cartContainer"></div>
-        <h2>Total Price: $<span id="totalPrice">0</span></h2>
-        <!--cards start here-->
-        <div class="cards">   
-            <div id="cartContainer"></div>
-            <!--product details are mentioned here-->
-
-
-        </div>
-        <!--cards end here-->
-
-    </div>
-    <div class="checkin-or-not">
-        <div class="close-check" id="closeBCheck">
-            <p>CLOSE</p>
-        </div>
-        <div class="check-out">
-            <p>CHECK OUT</p>
-        </div>
+        <!-- Clear Cart Button -->
+        <button class="btn btn-danger mt-3" onclick="clearCart()">Clear Cart</button>
     </div>
 
-</div>
+    <script src="localstorage.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-</div>
-<!--eclosing check in and parent-->
-
-
-<!--js code for add to card and other such operations-->
-    <script>
-               function addToCart(id, name, price) {
-            let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-
-            // Check if product is already in cart
-            let existingProduct = cart.find(item => item.id === id);
-            if (existingProduct) {
-                existingProduct.quantity += 1; 
-            } else {
-                cart.push({ id, name, price, quantity: 1 });
-            }
-
-            sessionStorage.setItem("cart", JSON.stringify(cart));
-            displayCart(); // Refresh cart display
-        }
-
-        function displayCart() {
-            let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-            const cartContainer = document.getElementById("cartContainer");
-            const totalPriceElement = document.getElementById("totalPrice");
-
-            cartContainer.innerHTML = ""; // Clear previous content
-            let total = 0;
-
-            cart.forEach((item, index) => {
-                let itemTotal = item.price * item.quantity;
-                total += itemTotal;
-
-                const itemHTML = `
-                    <div class="cart-item">
-                        <h4>${item.name}</h4>
-                        <p>Price: $${item.price}</p>
-
-                        <button onclick="updateQuantity(${index}, -1)">-</button>
-                        <p> <span id="qty-${index}">${item.quantity}</span></p>
-                        <button onclick="updateQuantity(${index}, 1)">+</button>
-                    </div>
-                `;
-                cartContainer.innerHTML += itemHTML;
-            });
-
-            totalPriceElement.textContent = total;
-        }
-
-        function updateQuantity(index, change) {
-            let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-            cart[index].quantity += change;
-
-            // Remove item if quantity falls below 1
-            if (cart[index].quantity < 1) {
-                cart.splice(index, 1);
-            }
-
-            sessionStorage.setItem("cart", JSON.stringify(cart));
-            displayCart(); // Refresh the cart
-        }
-
-        // Display cart when page loads
-        window.onload = displayCart;
-    </script>
-    <script src="checkin.js"></script>
 </body>
 </html>
