@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <p><strong>Total: $<span id="total-price">0</span></strong></p>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartItemsDiv = document.getElementById("cart-items");
+            let totalPrice = 0;
+
+            cartItemsDiv.innerHTML = ""; // Clear previous items
+
+            cart.forEach((item, index) => {
+                totalPrice += item.price * item.quantity;
+
+                cartItemsDiv.innerHTML += `
+                    <div>
+                        <p>${item.name} - $${item.price} x ${item.quantity}</p>
+                        <button onclick="updateQuantity(${index}, -1)">➖</button>
+                        <button onclick="updateQuantity(${index}, 1)">➕</button>
+                    </div>
+                `;
+            });
+
+            document.getElementById("total-price").textContent = totalPrice;
+        }
+
+        function updateQuantity(index, change) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart[index].quantity += change;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1); // Remove item if quantity is 0
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            loadCart(); // Refresh cart display
+        }
+
+        loadCart(); // Load cart when page opens
+    </script>
+</body>
+</html>
