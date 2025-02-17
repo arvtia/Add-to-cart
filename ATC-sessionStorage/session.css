@@ -1,0 +1,15 @@
+.product { border: 1px solid #ccc; margin: 10px; padding: 10px; width: 200px; height: 230px; object-fit: fill;}
+        
+.cart-item { border-bottom: 1px solid #ddd; padding: 10px; display: flex; align-items: center; justify-content: start; width: 100%; justify-content: space-evenly; background-color: black; color: white; }
+        
+.controls button { margin: 0 5px; cursor: pointer; }
+        
+.product-holder { display: flex; }
+        
+.product img{ height: 100px; width: 200px; object-fit: contain; justify-content: center; display: grid;}
+        
+.right-bar{ width: 40%; position: fixed; right: 0; top: 0; background-color: rgb(86, 85, 85); height: 100vh; color: white; }
+        
+.closeBTN { width: 60px; background-color: yellow; height: 30px; position: relative; top: 10px; }
+        
+.goTocart{ height: 30px; width: 90px; background-color: yellow; color: black; }
